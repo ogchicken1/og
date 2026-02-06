@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OG Chicken — Original Chicken & Burgers</title>
+    <meta
+      name="description"
+      content="OG Chicken: Original fried chicken & burgers with neon night vibe."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Modern, bold font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Grain / noise overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Floating glow blobs -->
+    <div class="glow glow-1" aria-hidden="true"></div>
+    <div class="glow glow-2" aria-hidden="true"></div>
+    <div class="glow glow-3" aria-hidden="true"></div>
+
+    <!-- Top Nav -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="OG Chicken home">
+          <div class="brand-logo">
+            <!-- Put your logo at: assets/logo.png -->
+            <img
+              src="assets/logo.png"
+              alt="OG Chicken logo"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.classList.add('fallback');
+              "
+            />
+            <span class="fallback-text">OG</span>
+          </div>
+          <div class="brand-text">
+            <div class="brand-name">OG Chicken</div>
+            <div class="brand-sub">Original Chicken • Burgers • Fries</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#menu">Menu</a>
+          <a href="#story">Story</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#locations">Locations</a>
+        </nav>
+
+        <div class="nav-cta">
+          <button class="btn btn-ghost" id="openOrder">
+            <span class="btn-icon">🛍️</span> Order
+          </button>
+          <button class="btn btn-fire" data-scroll="#menu">
+            <span class="btn-icon">🔥</span> Explore
+          </button>
+        </div>
+
+        <button class="burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#locations">Locations</a>
+        <button class="btn btn-fire" data-scroll="#menu" style="width: 100%">
+          🔥 Explore Menu
+        </button>
+        <button class="btn btn-ghost" id="openOrder2" style="width: 100%">
+          🛍️ Order Now
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <div class="pill reveal">
+              <span class="spark">✦</span>
+              Neon night food • Real crispy textures • OG flame vibe
+            </div>
+
+            <h1 class="hero-title reveal">
+              <span class="neon-amber">Original</span>
+              <span class="neon-fire">Fried Chicken</span>
+              & Burgers.
+            </h1>
+
+            <p class="hero-desc reveal">
+              OG Chicken means <b>Original Chicken</b>. A premium neon theme
+              with real-photo food visuals, smooth animations, and a modern
+              street-food vibe.
+            </p>
+
+            <div class="hero-actions reveal">
+              <button class="btn btn-fire" data-scroll="#menu">
+                🔥 Explore Menu
+              </button>
+              <button class="btn btn-ghost" data-scroll="#locations">
+                📍 Find Us
+              </button>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span
+                ><span class="dim">★</span>
+                <span class="rating-text">Crunch & flavor</span>
+              </div>
+            </div>
+
+            <div class="stats reveal">
+              <div class="stat glass">
+                <div class="stat-k">Signature</div>
+                <div class="stat-v">OG Fire Chicken</div>
+                <div class="stat-s">Crispy • Juicy • Spicy</div>
+              </div>
+              <div class="stat glass">
+                <div class="stat-k">Best Combo</div>
+                <div class="stat-v">Burger + Fries</div>
+                <div class="stat-s">Fast • Fresh • OG</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right reveal">
+            <div class="hero-card glass tilt" id="tiltCard">
+              <div class="hero-img">
+                <!-- Put your real photo at: assets/food/chicken.jpg -->
+                <img
+                  src="assets/food/chicken.jpg"
+                  alt="Fried chicken"
+                  loading="eager"
+                />
+                <div class="hero-img-overlay"></div>
+              </div>
+
+              <div class="hero-card-bottom">
+                <div class="tag"><span class="dot"></span> Real Photo Feel</div>
+
+                <div class="hero-mini-grid">
+                  <div class="mini glass">
+                    <div class="mini-top">Today’s Pick</div>
+                    <div class="mini-title">OG Crunch Box</div>
+                    <div class="mini-sub">Chicken + Fries + Dip</div>
+                  </div>
+                  <div class="mini glass">
+                    <div class="mini-top">Hot Right Now</div>
+                    <div class="mini-title">Neon Smash Burger</div>
+                    <div class="mini-sub">Double smash • OG sauce</div>
+                  </div>
+                </div>
+
+                <button class="btn btn-fire wide" id="openOrder3">
+                  🛍️ Start Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-marquee">
+          <div class="marquee-track">
+            <span>OG CHICKEN</span><span>ORIGINAL</span><span>CRISPY</span
+            ><span>JUICY</span><span>NEON</span> <span>OG CHICKEN</span
+            ><span>ORIGINAL</span><span>CRISPY</span><span>JUICY</span
+            ><span>NEON</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section id="menu" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Neon Menu</h2>
+            <p>Real-photo cards + glow hover + quick filter.</p>
+          </div>
+
+          <div class="filters reveal" role="tablist" aria-label="Menu filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="chicken">Chicken</button>
+            <button class="chip" data-filter="burger">Burgers</button>
+            <button class="chip" data-filter="sides">Sides</button>
+            <button class="chip" data-filter="drinks">Drinks</button>
+          </div>
+
+          <div class="grid" id="menuGrid">
+            <!-- Menu items injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section id="story" class="section">
+        <div class="container story-grid">
+          <div class="story-left reveal">
+            <h2>Why OG?</h2>
+            <p>
+              OG means <b>Original Chicken</b> — a bold, crispy recipe made for
+              neon-night cravings. Premium crunch, clean branding, and a modern
+              feel.
+            </p>
+
+            <div class="story-points">
+              <div class="point glass reveal">
+                <div class="point-icon">🔥</div>
+                <div>
+                  <div class="point-title">Signature spice</div>
+                  <div class="point-sub">
+                    Heat balanced with flavor + crunch.
+                  </div>
+                </div>
+              </div>
+              <div class="point glass reveal">
+                <div class="point-icon">✨</div>
+                <div>
+                  <div class="point-title">Neon vibe</div>
+                  <div class="point-sub">
+                    Black base + amber/orange glow theme.
+                  </div>
+                </div>
+              </div>
+              <div class="point glass reveal">
+                <div class="point-icon">📸</div>
+                <div>
+                  <div class="point-title">Real photo look</div>
+                  <div class="point-sub">
+                    Lighting overlays + grain for realism.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-right reveal">
+            <div class="stack">
+              <div class="stack-card glass">
+                <h3>OG Sauce</h3>
+                <p>Creamy, tangy, slightly spicy. Built for fries & burgers.</p>
+              </div>
+              <div class="stack-card glass">
+                <h3>Fresh & Fast</h3>
+                <p>Quick serve without losing quality or crunch.</p>
+              </div>
+              <div class="stack-card glass">
+                <h3>Combo Culture</h3>
+                <p>Boxes, buckets, burgers — made for sharing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Gallery</h2>
+            <p>Replace these with your real food photos.</p>
+          </div>
+
+          <div class="gallery">
+            <div class="gcard glass reveal">
+              <img src="assets/food/burger.jpg" alt="Burger" loading="lazy" />
+            </div>
+            <div class="gcard glass reveal">
+              <img src="assets/food/fries.jpg" alt="Fries" loading="lazy" />
+            </div>
+            <div class="gcard glass reveal">
+              <img src="assets/food/wings.jpg" alt="Wings" loading="lazy" />
+            </div>
+            <div class="gcard glass reveal">
+              <img src="assets/food/drink.jpg" alt="Drink" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATIONS / CONTACT -->
+      <section id="locations" class="section">
+        <div class="container contact-grid">
+          <div class="contact-left reveal">
+            <h2>Visit OG Chicken</h2>
+            <p>Put your shop address + phone here.</p>
+
+            <div class="contact-cards">
+              <div class="ccard glass reveal">
+                <div class="cc-title">📍 Location</div>
+                <div class="cc-sub">Your Street, City, Country</div>
+              </div>
+              <div class="ccard glass reveal">
+                <div class="cc-title">📞 Phone</div>
+                <div class="cc-sub">+1 (000) 000-0000</div>
+              </div>
+              <div class="ccard glass reveal">
+                <div class="cc-title">🕒 Hours</div>
+                <div class="cc-sub">Mon–Sun • 12 PM – 12 AM</div>
+              </div>
+            </div>
+
+            <div class="contact-actions reveal">
+              <button class="btn btn-fire" id="openOrder4">🛍️ Order Now</button>
+              <a class="btn btn-ghost" href="tel:+10000000000">📞 Call</a>
+            </div>
+          </div>
+
+          <div class="contact-right reveal">
+            <div class="map glass">
+              <div class="map-top">
+                <div class="map-badge">NEON ZONE</div>
+                <div class="map-sub">Embed Google Maps later</div>
+              </div>
+              <div class="map-body">
+                <div class="map-pin">📍</div>
+                <div class="map-lines">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="newsletter glass reveal">
+              <h3>Get OG Deals</h3>
+              <p>Weekly offers & new drops.</p>
+              <form id="newsletterForm">
+                <input type="email" placeholder="Email address" required />
+                <button class="btn btn-fire" type="submit">Join</button>
+              </form>
+              <div class="hint">No spam. Just crispy updates.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div class="foot-left">
+            <div class="foot-brand">OG Chicken</div>
+            <div class="foot-sub">The Real OG — Original Chicken & Burgers</div>
+          </div>
+          <div class="foot-right">
+            <a href="#menu">Menu</a>
+            <a href="#locations">Contact</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ORDER DRAWER -->
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <aside
+      class="drawer"
+      id="drawer"
+      aria-label="Order drawer"
+      aria-hidden="true"
+    >
+      <div class="drawer-head">
+        <div>
+          <div class="drawer-title">Start your OG order</div>
+          <div class="drawer-sub">
+            Quick picks. Add to cart style UI (demo).
+          </div>
+        </div>
+        <button class="icon-btn" id="closeOrder" aria-label="Close order">
+          ✕
+        </button>
+      </div>
+
+      <div class="drawer-body" id="cartArea">
+        <div class="cart-empty">
+          <div class="cart-emoji">🧺</div>
+          <div class="cart-text">Your cart is empty.</div>
+          <div class="cart-sub">Add items from the menu.</div>
+        </div>
+      </div>
+
+      <div class="drawer-foot">
+        <div class="total">
+          <span>Total</span>
+          <b id="totalPrice">$0.00</b>
+        </div>
+        <button class="btn btn-fire wide" id="checkoutBtn">Checkout</button>
+        <div class="hint small">
+          Demo checkout button — connect to WhatsApp / POS later.
+        </div>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
