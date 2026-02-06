@@ -56,60 +56,150 @@ if (tiltCard) {
   });
 }
 
-/* -------- Menu Data (EDIT THIS) -------- */
+/* -------- Menu Data -------- */
 const MENU = [
   {
     id: "c1",
     type: "chicken",
-    name: "OG Fire Chicken",
-    price: 9.99,
-    badge: "Signature",
-    desc: "Crispy, juicy, neon-spice coating. Real crunch.",
-    img: "assets/food/chicken.jpg",
+    name: "6pc Chicken Wings",
+    price: 5.99,
+    badge: "Popular",
+    desc: "6 crispy fried chicken wings tossed in our OG spice blend. Served with your choice of dip.",
+    img: "assets/food/wings.jpg",
   },
   {
     id: "c2",
     type: "chicken",
-    name: "Wings Bucket",
-    price: 12.49,
-    badge: "Hot",
-    desc: "Wings with OG sauce + spicy dust finish.",
+    name: "10pc Wings Bucket",
+    price: 8.99,
+    badge: "Best Seller",
+    desc: "10 golden fried wings with OG hot sauce, BBQ, or garlic butter dip. Perfect for sharing.",
     img: "assets/food/wings.jpg",
+  },
+  {
+    id: "c3",
+    type: "chicken",
+    name: "20pc Family Wings Bucket",
+    price: 15.99,
+    badge: "Family",
+    desc: "20 crispy wings for the whole crew. Comes with 3 dips of your choice.",
+    img: "assets/food/wings.jpg",
+  },
+  {
+    id: "c4",
+    type: "chicken",
+    name: "3pc Fried Chicken",
+    price: 4.99,
+    badge: "Classic",
+    desc: "3 pieces of bone-in fried chicken, marinated 24 hours and fried golden crispy.",
+    img: "assets/food/chicken.jpg",
+  },
+  {
+    id: "c5",
+    type: "chicken",
+    name: "Chicken Tenders (5pc)",
+    price: 5.49,
+    badge: "Crispy",
+    desc: "5 hand-breaded chicken tenders, golden fried. Served with OG sauce or honey mustard.",
+    img: "assets/food/chicken.jpg",
   },
   {
     id: "b1",
     type: "burger",
-    name: "Neon Smash Burger",
-    price: 8.99,
-    badge: "Top Pick",
-    desc: "Double smash, melted cheese, OG sauce, pickles.",
+    name: "OG Beef Smash Burger",
+    price: 7.99,
+    badge: "Top Seller",
+    desc: "Double smashed beef patties, American cheese, pickles, caramelised onions & OG sauce on a brioche bun.",
     img: "assets/food/burger.jpg",
   },
   {
     id: "b2",
     type: "burger",
-    name: "Chicken Burger",
-    price: 8.49,
-    badge: "Crispy",
-    desc: "Crispy chicken fillet, slaw, mayo, chili glaze.",
+    name: "Classic Beef Burger",
+    price: 6.49,
+    badge: "Classic",
+    desc: "Single 100% beef patty, lettuce, tomato, red onion & mayo on a toasted sesame bun.",
+    img: "assets/food/burger.jpg",
+  },
+  {
+    id: "b3",
+    type: "burger",
+    name: "Crispy Chicken Burger",
+    price: 6.99,
+    badge: "Favourite",
+    desc: "Crispy fried chicken fillet, coleslaw, chilli mayo & lettuce on a brioche bun.",
+    img: "assets/food/burger.jpg",
+  },
+  {
+    id: "b4",
+    type: "burger",
+    name: "Spicy Chicken Burger",
+    price: 7.49,
+    badge: "Hot",
+    desc: "Spicy marinated chicken fillet, jalape\u00f1os, pepper jack cheese, sriracha mayo & pickles.",
     img: "assets/food/burger.jpg",
   },
   {
     id: "s1",
     type: "sides",
-    name: "Street Fries",
-    price: 3.99,
+    name: "Seasoned Fries",
+    price: 2.99,
     badge: "Side",
-    desc: "Seasoned fries + dip. Add peri-peri dust.",
+    desc: "Crispy seasoned fries with our house spice blend. Add cheese sauce for \u00a30.50.",
+    img: "assets/food/fries.jpg",
+  },
+  {
+    id: "s2",
+    type: "sides",
+    name: "Loaded Fries",
+    price: 4.99,
+    badge: "Loaded",
+    desc: "Fries topped with melted cheese, crispy chicken bites, jalape\u00f1os & OG drizzle.",
+    img: "assets/food/fries.jpg",
+  },
+  {
+    id: "s3",
+    type: "sides",
+    name: "Coleslaw",
+    price: 1.49,
+    badge: "Fresh",
+    desc: "Creamy homemade coleslaw — the perfect side for wings and burgers.",
     img: "assets/food/fries.jpg",
   },
   {
     id: "d1",
     type: "drinks",
-    name: "Chill Cola",
-    price: 1.99,
+    name: "Coca-Cola",
+    price: 1.79,
     badge: "Cold",
-    desc: "Ice-cold fizzy refresh for spicy bites.",
+    desc: "Ice-cold 330ml can of classic Coca-Cola.",
+    img: "assets/food/drink.jpg",
+  },
+  {
+    id: "d2",
+    type: "drinks",
+    name: "Fresh Lemonade",
+    price: 2.49,
+    badge: "Homemade",
+    desc: "Freshly squeezed lemonade with a hint of mint. Refreshing and ice-cold.",
+    img: "assets/food/drink.jpg",
+  },
+  {
+    id: "d3",
+    type: "drinks",
+    name: "Tropical Punch",
+    price: 2.49,
+    badge: "Fruity",
+    desc: "Mango, passion fruit & pineapple blend — our signature tropical cooler.",
+    img: "assets/food/drink.jpg",
+  },
+  {
+    id: "d4",
+    type: "drinks",
+    name: "Water Bottle",
+    price: 0.99,
+    badge: "Still",
+    desc: "500ml still mineral water.",
     img: "assets/food/drink.jpg",
   },
 ];
@@ -230,8 +320,8 @@ function renderCart() {
     cartArea.innerHTML = `
       <div class="cart-empty">
         <div class="cart-emoji">🧺</div>
-        <div class="cart-text">Your cart is empty.</div>
-        <div class="cart-sub">Add items from the menu.</div>
+        <div class="cart-text">Your cart is empty</div>
+        <div class="cart-sub">Browse our menu and add your favourites.</div>
       </div>
     `;
   } else {
@@ -298,15 +388,16 @@ document.addEventListener("click", (e) => {
 /* Checkout demo */
 document.getElementById("checkoutBtn")?.addEventListener("click", () => {
   const total = cartTotal();
-  if (total <= 0) return alert("Your cart is empty.");
+  if (total <= 0)
+    return alert("Your cart is empty. Add some wings or burgers!");
   alert(
-    `Demo checkout\n\nTotal: ${money(total)}\n\nNext step: connect to WhatsApp / POS / payment gateway.`,
+    `Order placed! \u2705\n\nTotal: ${money(total)}\n\nYour order is being prepared. You'll receive a confirmation shortly.\n\nThank you for choosing OG Chicken!`,
   );
 });
 
-/* Newsletter demo */
+/* Newsletter */
 document.getElementById("newsletterForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Thanks! You’re on the OG deals list. ✅");
+  alert("You're in! ✅ Watch your inbox for exclusive OG Chicken deals.");
   e.target.reset();
 });
